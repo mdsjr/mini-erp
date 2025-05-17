@@ -17,13 +17,15 @@ spl_autoload_register(function ($class) {
     $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
     if (file_exists($file)) {
         require $file;
+    } else {
+        error_log("Arquivo não encontrado: $file");
     }
 });
 
 // Roteamento simples
 $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$base_path = '/mini_erp/public/';
-$route = str_replace($base_path, '', $request_uri);
+$base_path = '/';
+$route = ltrim(str_replace($base_path, '', $request_uri), '/');
 
 switch ($route) {
     case '':
