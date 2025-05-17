@@ -62,6 +62,7 @@ webhook.php -H "Content-Type: application/json" -d '{"id": 1, "status": "cancela
 Verifique e-mails de confirmação no Mailtrap.
 
 ## Estrutura do Projeto  
+````
 mini_erp/  
 ├── config/           # Configurações (banco, e-mail)  
 ├── libs/            # Bibliotecas (PHPMailer)  
@@ -71,6 +72,7 @@ mini_erp/
 ├── .gitignore  
 ├── README.md  
 ├── LICENSE 
-
-
+````
+**Demo**:
+https://www.youtube.com/watch?v=4g_XBWPNsu8&feature=youtu.be
 
